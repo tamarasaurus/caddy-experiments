@@ -1,19 +1,19 @@
-package portal
+package gateway/middleware
 
 import "github.com/caddyserver/caddy/v2"
 
 func init() {
-	caddy.RegisterModule(Gizmo{})
+	caddy.RegisterModule(GatewayMiddleware{})
 }
 
-// Gizmo is an example; put your own type here.
-type Gizmo struct {
+// GatewayMiddleware is an example; put your own type here.
+type GatewayMiddleware struct {
 }
 
 // CaddyModule returns the Caddy module information.
-func (Gizmo) CaddyModule() caddy.ModuleInfo {
+func (GatewayMiddleware) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
-		ID:  "foo.gizmo",
-		New: func() caddy.Module { return new(Gizmo) },
+		ID:  "gateway.middleware",
+		New: func() caddy.Module { return new(GatewayMiddleware) },
 	}
 }
