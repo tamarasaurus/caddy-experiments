@@ -17,6 +17,7 @@ func init() {
 type GatewayMiddleware struct {
 }
 
+// CaddyModule Module registration
 func (GatewayMiddleware) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
 		ID:  "http.handlers.gateway_middleware",
@@ -24,6 +25,7 @@ func (GatewayMiddleware) CaddyModule() caddy.ModuleInfo {
 	}
 }
 
+// UnmarshalCaddyfile No config
 func (s *GatewayMiddleware) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 	return nil
 }
@@ -38,7 +40,6 @@ func parseCaddyfile(h httpcaddyfile.Helper) (caddyhttp.MiddlewareHandler, error)
 }
 
 func (s GatewayMiddleware) ServeHTTP(w http.ResponseWriter, r *http.Request, _ caddyhttp.Handler) error {
-	// w.WriteHeader(http.)
 	w.Write([]byte("Admin token"))
 
 	return nil
