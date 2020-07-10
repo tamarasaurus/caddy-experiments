@@ -17,10 +17,9 @@ func init() {
 type GatewayMiddleware struct {
 }
 
-// CaddyModule returns the Caddy module information.
 func (GatewayMiddleware) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
-		ID:  "gateway.middleware",
+		ID:  "http.handlers.gateway_middleware",
 		New: func() caddy.Module { return new(GatewayMiddleware) },
 	}
 }
