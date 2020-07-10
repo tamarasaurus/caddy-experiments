@@ -1,4 +1,4 @@
-module github.com/tamarasaurus/caddy-experiments/checker
+module github.com/tamarasaurus/caddy-experiments
 
 go 1.14
 

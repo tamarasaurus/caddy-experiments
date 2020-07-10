@@ -1,4 +1,4 @@
-package checker
+package whatever
 
 import "github.com/caddyserver/caddy/v2"
 
