@@ -1,4 +1,4 @@
-package checker
+package portal
 
 import "github.com/caddyserver/caddy/v2"
 
