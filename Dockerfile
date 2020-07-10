@@ -1,6 +1,6 @@
 # Build caddy with our plugin
 FROM caddy:2-builder AS builder
-RUN caddy-builder github.com/tamarasaurus/caddy-experiments@a526ec99d2b5d795ca65ca2baf25eede2b1780a5
+RUN caddy-builder github.com/tamarasaurus/caddy-experiments@ce3052f1a99af7f2378a6987e1cd04b0dbad8b47
 
 # Copy over the binary
 FROM caddy:2-alpine
