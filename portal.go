@@ -42,6 +42,7 @@ func parseCaddyfile(h httpcaddyfile.Helper) (caddyhttp.MiddlewareHandler, error)
 func (s GatewayMiddleware) ServeHTTP(w http.ResponseWriter, r *http.Request, _ caddyhttp.Handler) error {
 	w.Write([]byte("Admin token"))
 
+	// Serve only for /get-token
 	return nil
 }
 

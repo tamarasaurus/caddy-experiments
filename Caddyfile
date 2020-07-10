@@ -8,5 +8,8 @@
     file_server
     try_files {path}.html {path} index.html
     encode gzip
+}
+
+:8080/get-token {
     gateway_middleware
 }
