@@ -1,4 +1,4 @@
-package gateway/middleware
+package gatewaymiddleware
 
 import "github.com/caddyserver/caddy/v2"
 
@@ -6,7 +6,6 @@ func init() {
 	caddy.RegisterModule(GatewayMiddleware{})
 }
 
-// GatewayMiddleware is an example; put your own type here.
 type GatewayMiddleware struct {
 }
 
