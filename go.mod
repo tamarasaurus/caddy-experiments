@@ -1,4 +1,4 @@
-module github.com/tamarasaurus/caddy-experiments
+module github.com/tamarasaurus/caddy-experiments/portal
 
 go 1.14
 
